@@ -10,7 +10,6 @@
 | user_id         | N   | PK  | ユーザーID（JWTから取得）                 |
 | order_id        | N   | SK  | 注文ID                                    |
 | created_at      | N   | -   | 注文日時 UnixTimestamp(ms)                |
-| delivery_status | S   | -   | 配送ステータス（PR:処理中 / ED:配送済み） |
 
 ## LSI
 
