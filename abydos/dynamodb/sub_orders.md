@@ -5,17 +5,18 @@
 
 ## テーブル定義
 
-| 属性名       | 型  | Key     | 説明                                  |
-| ------------ | --- | ------- | ------------------------------------- |
-| order_id     | N   | PK      | 注文ID（orders テーブルの SK と対応） |
-| sub_order_id | N   | SK      | 受注明細ID                            |
-| user_id      | N   | -       | ユーザーID                            |
-| shop_id      | N   | GSI1-PK | 店舗ID                                |
-| product_id   | N   | -       | 商品ID                                |
-| product_name | S   | -       | 商品名（注文時点のスナップショット）  |
-| price        | N   | -       | 注文時単価                            |
-| order_num    | N   | -       | 注文数                                |
-| created_at   | N   | GSI1-SK | 受注日時 UnixTimestamp(ms)            |
+| 属性名          | 型  | Key     | 説明                                      |
+| --------------- | --- | ------- | ----------------------------------------- |
+| order_id        | N   | PK      | 注文ID（orders テーブルの SK と対応）     |
+| sub_order_id    | N   | SK      | 受注明細ID                                |
+| user_id         | N   | -       | ユーザーID                                |
+| shop_id         | N   | GSI1-PK | 店舗ID                                    |
+| product_id      | N   | -       | 商品ID                                    |
+| product_name    | S   | -       | 商品名（注文時点のスナップショット）      |
+| price           | N   | -       | 注文時単価                                |
+| order_num       | N   | -       | 注文数                                    |
+| created_at      | N   | GSI1-SK | 受注日時 UnixTimestamp(ms)                |
+| delivery_status | S   | -       | 配送ステータス（PR:処理中 / ED:配送済み） |
 
 ## LSI
 
