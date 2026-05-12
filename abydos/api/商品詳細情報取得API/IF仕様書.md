@@ -54,7 +54,7 @@ GET
 | HttpStatus | error_code | message                 | 条件                                 |
 | ---------- | ---------- | ----------------------- | ------------------------------------ |
 | 400        | API_ERR001 | validation check error. | バリデーションエラー                 |
-| 404        | API_ERR002 | data not found.         | 指定したた商品が存在しない場合     |
+| 404        | API_ERR004 | data not found.         | 指定した商品が存在しない場合         |
 | 500        | API_ERR999 | server error.           | バックエンド内で想定外のエラー発生時 |
 
 ```json
