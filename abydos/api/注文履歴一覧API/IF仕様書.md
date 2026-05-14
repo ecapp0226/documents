@@ -44,7 +44,7 @@ GET
       "total": 13740,
       "sub_orders": [
         {
-          "sub_order_id": 1001,
+          "sub_order_id": 1,
           "product_id": 10001,
           "product_name": "プレミアムコットンTシャツ",
           "shop_id": 20001,
@@ -53,7 +53,7 @@ GET
           "total": 4960
         },
         {
-          "sub_order_id": 1001,
+          "sub_order_id": 2,
           "product_id": 10002,
           "product_name": "ランニングシューズ",
           "shop_id": 20001,
@@ -62,7 +62,7 @@ GET
           "total": 6800
         },
         {
-          "sub_order_id": 1002,
+          "sub_order_id": 3,
           "product_id": 10003,
           "product_name": "UVカットキャップ",
           "shop_id": 12346,
