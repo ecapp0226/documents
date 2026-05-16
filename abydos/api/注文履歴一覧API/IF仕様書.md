@@ -24,8 +24,8 @@ GET
 |             | order_id        |              | 注文ID                | 〇       | Number |                            |
 |             | created_at      |              | 注文日時              | 〇       | Number | UnixTimestamp(ミリ秒)      |
 |             | total           |              | 合計金額              | 〇       | Number |                            |
-|             | sub_orders      |              | 受注一覧              | 〇       | Array  |                            |
-|             |                 | sub_order_id | 受注ID                | 〇       | Number |                            |
+|             | details         |              | 受注一覧              | 〇       | Array  |                            |
+|             |                 | detail_id    | 受注ID                | 〇       | Number |                            |
 |             |                 | product_id   | 商品ID                | 〇       | Number |                            |
 |             |                 | product_name | 商品名                | 〇       | String |                            |
 |             |                 | shop_id      | 店舗ID                | 〇       | Number |                            |
@@ -42,9 +42,9 @@ GET
       "order_id": 123456,
       "created_at": 1496918153734,
       "total": 13740,
-      "sub_orders": [
+      "details": [
         {
-          "sub_order_id": 1,
+          "detail_id": 1,
           "product_id": 10001,
           "product_name": "プレミアムコットンTシャツ",
           "shop_id": 20001,
@@ -53,7 +53,7 @@ GET
           "total": 4960
         },
         {
-          "sub_order_id": 2,
+          "detail_id": 2,
           "product_id": 10002,
           "product_name": "ランニングシューズ",
           "shop_id": 20001,
@@ -62,7 +62,7 @@ GET
           "total": 6800
         },
         {
-          "sub_order_id": 3,
+          "detail_id": 3,
           "product_id": 10003,
           "product_name": "UVカットキャップ",
           "shop_id": 12346,
