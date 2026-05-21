@@ -15,14 +15,19 @@ POST
 ## Response
 **正常系**
 
-| 物理名    |     | 論理名      | Required | 型     | Note |
-| --------- | --- | ----------- | -------- | ------ | ---- |
-| token     |     | JWTトークン | 〇       | String |      |
-| user_name |     | ユーザー名  | 〇       | String |      |
+レスポンスヘッダー:
+| ヘッダー名 | 値                                                                   | Note                                   |
+| ---------- | -------------------------------------------------------------------- | -------------------------------------- |
+| Set-Cookie | token={JWT}; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=3600 | ブラウザが自動保持。JSからアクセス不可 |
+
+レスポンスボディ:
+
+| 物理名    |     | 論理名     | Required | 型     | Note |
+| --------- | --- | ---------- | -------- | ------ | ---- |
+| user_name |     | ユーザー名 | 〇       | String |      |
 
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30",
   "user_name": "John Doe"
 }
 ```
@@ -32,7 +37,7 @@ POST
 | HttpStatus | error_code       | message                   | 条件                                 |
 | ---------- | ---------------- | ------------------------- | ------------------------------------ |
 | 400        | API_ERR001       | validation check error.   | バリデーションエラー                 |
-| 401        | API_LOGIN_ERR001 | invalid password or email | JWTが期限切れ・無効な場合            |
+| 401        | API_LOGIN_ERR001 | invalid password or email | メールアドレスまたはパスワードが不正 |
 | 500        | API_ERR999       | server error.             | バックエンド内で想定外のエラー発生時 |
 
 ```json
