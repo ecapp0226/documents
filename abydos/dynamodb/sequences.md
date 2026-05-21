@@ -7,7 +7,7 @@
 
 | 属性名        | 型  | Key | 説明                                         |
 | ------------- | --- | --- | -------------------------------------------- |
-| sequence_name | S   | PK  | 採番対象の識別名（例: "order_id", "sub_order_id"） |
+| sequence_name | S   | PK  | 採番対象の識別名（例: "order_id", "detail_id"） |
 | current_value | N   | -   | 現在の採番値                                 |
 
 ## LSI
