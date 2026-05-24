@@ -7,7 +7,7 @@ async function capture() {
   await page.setViewport({ width: 1280, height: 800 })
 
   // 商品詳細
-  const html = 'c:/Users/saki0/git/projects/ph1/docs/画面要求/商品詳細/product_detail.html'
+  const html = path.join(__dirname, '../../../../../projects/ph1/docs/画面要求/商品詳細/product_detail.html')
   await page.goto(`file:///${path.resolve(html).replace(/\\/g, '/')}`, { waitUntil: 'networkidle0' })
 
   await page.screenshot({ path: path.join(__dirname, 'product_detail_design.png'), fullPage: true })
@@ -32,7 +32,7 @@ async function capture() {
   }
 
   // エラー画面
-  const errorHtml = 'c:/Users/saki0/git/projects/ph1/docs/画面要求/エラー/error.html'
+  const errorHtml = path.join(__dirname, '../../../../../projects/ph1/docs/画面要求/エラー/error.html')
   await page.goto(`file:///${path.resolve(errorHtml).replace(/\\/g, '/')}`, { waitUntil: 'networkidle0' })
 
   await page.screenshot({ path: path.join(__dirname, 'error_design.png'), fullPage: true })

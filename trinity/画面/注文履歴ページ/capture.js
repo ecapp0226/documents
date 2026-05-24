@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer')
 const path = require('path')
 
 async function capture() {
-  const html = 'c:/Users/saki0/git/projects/ph1/docs/画面要求/購入履歴/order_history.html'
+  const html = path.join(__dirname, '../../../../../projects/ph1/docs/画面要求/購入履歴/order_history.html')
   const fileUrl = `file:///${path.resolve(html).replace(/\\/g, '/')}`
 
   const browser = await puppeteer.launch({ headless: true })
