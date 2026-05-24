@@ -12,6 +12,13 @@ GET
 ## Response
 **正常系**
 
+| HttpStatus | 条件 |
+| ---------- | ---- |
+| 200        | 認証済み（有効なJWTトークンがCookieに存在する場合） |
+| 204        | 未認証（Cookieなし・JWT期限切れ・無効な場合） |
+
+### 200 OK
+
 | 物理名    |     | 論理名     | Required | 型     | Note |
 | --------- | --- | ---------- | -------- | ------ | ---- |
 | user_id   |     | ユーザーID | 〇       | Number |      |
@@ -26,19 +33,14 @@ GET
 }
 ```
 
+### 204 No Content
+レスポンスボディなし
+
 **異常系**
 
 | HttpStatus | error_code | message       | 条件                              |
 | ---------- | ---------- | ------------- | --------------------------------- |
-| 401        | API_ERR003 | unauthorized. | Cookieなし・JWT期限切れ・無効な場合 |
 | 500        | API_ERR999 | server error. | バックエンド内で想定外のエラー発生時 |
-
-```json
-{
-  "error_code": "API_ERR003",
-  "message": "unauthorized."
-}
-```
 
 ```json
 {
