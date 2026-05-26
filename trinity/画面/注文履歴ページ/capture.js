@@ -19,6 +19,12 @@ async function capture() {
     console.log('Captured: order_history_main.png')
   }
 
+  const toast = await page.$('#error-toast')
+  if (toast) {
+    await toast.screenshot({ path: path.join(__dirname, 'error_toast.png') })
+    console.log('Captured: error_toast.png')
+  }
+
   await browser.close()
 }
 
