@@ -1,4 +1,5 @@
 site_name: ecapp ドキュメント
+site_url: https://ecapp0226.github.io/documents/
 theme:
   name: material
   language: ja
