@@ -1,0 +1,57 @@
+site_name: ecapp ドキュメント
+theme:
+  name: material
+  language: ja
+
+docs_dir: .
+site_dir: site
+
+nav:
+  - トップ: index.md
+  - バックエンド (abydos):
+    - システム構成図: abydos/001.設計/システム構成図.md
+    - API設計:
+      - エラーコード一覧: abydos/001.設計/api/エラーコード一覧.md
+      - ログインAPI:
+        - IF仕様書: abydos/001.設計/api/ログインAPI/IF仕様書.md
+        - 詳細設計: abydos/001.設計/api/ログインAPI/詳細設計.md
+      - ユーザー情報取得API:
+        - IF仕様書: abydos/001.設計/api/ユーザー情報取得API/IF仕様書.md
+        - 詳細設計: abydos/001.設計/api/ユーザー情報取得API/詳細設計.md
+      - 商品一覧情報取得API:
+        - IF仕様書: abydos/001.設計/api/商品一覧情報取得API/IF仕様書.md
+        - 詳細設計: abydos/001.設計/api/商品一覧情報取得API/詳細設計.md
+      - 商品詳細情報取得API:
+        - IF仕様書: abydos/001.設計/api/商品詳細情報取得API/IF仕様書.md
+        - 詳細設計: abydos/001.設計/api/商品詳細情報取得API/詳細設計.md
+      - 注文確定API:
+        - IF仕様書: abydos/001.設計/api/注文確定API/IF仕様書.md
+        - 詳細設計: abydos/001.設計/api/注文確定API/詳細設計.md
+      - 注文履歴一覧API:
+        - IF仕様書: abydos/001.設計/api/注文履歴一覧API/IF仕様書.md
+        - 詳細設計: abydos/001.設計/api/注文履歴一覧API/詳細設計.md
+    - DynamoDBテーブル設計:
+      - users: abydos/001.設計/dynamodb/users.md
+      - products: abydos/001.設計/dynamodb/products.md
+      - orders: abydos/001.設計/dynamodb/orders.md
+      - order_details: abydos/001.設計/dynamodb/order_details.md
+      - reviews: abydos/001.設計/dynamodb/reviews.md
+      - sequences: abydos/001.設計/dynamodb/sequences.md
+    - 環境構築: abydos/000.環境構築/構築手順.md
+    - 開発:
+      - コーディング規約: abydos/002.開発/コーディング規約.md
+      - ブランチ運用ルール: abydos/002.開発/ブランチ運用ルール.md
+      - デプロイ手順: abydos/002.開発/デプロイ手順.md
+    - テスト:
+      - テスト手順: abydos/003.テスト/テスト手順.md
+      - 結合試験観点: abydos/003.テスト/結合試験観点.md
+  - フロントエンド (trinity):
+    - 認証仕様: trinity/認証仕様.md
+    - 画面一覧: trinity/画面/画面一覧.md
+    - 画面設計:
+      - トップページ: trinity/画面/トップページ/画面設計.md
+      - 商品詳細ページ: trinity/画面/商品詳細ページ/画面設計.md
+      - カートページ: trinity/画面/カートページ/画面設計.md
+      - 注文確定ページ: trinity/画面/注文確定ページ/画面設計.md
+      - 注文履歴ページ: trinity/画面/注文履歴ページ/画面設計.md
+      - ログインページ: trinity/画面/ログインページ/画面設計.md
