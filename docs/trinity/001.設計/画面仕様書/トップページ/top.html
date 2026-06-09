@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP画面 プレビュー</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Segoe UI', 'Hiragino Sans', sans-serif; background: #f9fafb; }
+    .dropdown-menu { display: none; }
+    .dropdown:hover .dropdown-menu { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- ヘッダー（共通） -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="../top/top.html" class="text-xl font-bold text-green-700 shrink-0 flex items-center gap-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+      </svg>
+      EC Store
+    </a>
+    <div class="flex-1 max-w-xl">
+      <div class="relative">
+        <input type="text" placeholder="商品を検索..." class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+        <span class="absolute right-3 top-2.5 text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="flex items-center gap-4 shrink-0">
+      <a href="../かご/cart.html" class="relative text-gray-600 hover:text-green-700">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg>
+        <span class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">3</span>
+      </a>
+      <!-- Headless UI Menu: ユーザードロップダウン（未ログイン） -->
+      <a href="../ログイン/login.html" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 font-medium">ログイン</a>
+    </div>
+  </div>
+</header>
+
+<!-- ヘッダー（ログイン済みバージョン） -->
+<div class="bg-yellow-50 border-b border-yellow-200 text-center text-xs text-yellow-700 py-1">▼ ログイン済みヘッダーの表示例</div>
+<header class="bg-white shadow-sm z-40">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="../top/top.html" class="text-xl font-bold text-green-700 shrink-0 flex items-center gap-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+      </svg>
+      EC Store
+    </a>
+    <div class="flex-1 max-w-xl">
+      <div class="relative">
+        <input type="text" placeholder="商品を検索..." class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+        <span class="absolute right-3 top-2.5 text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="flex items-center gap-4 shrink-0">
+      <a href="../かご/cart.html" class="relative text-gray-600 hover:text-green-700">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg>
+        <span class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">3</span>
+      </a>
+      <!-- Headless UI Menu: ユーザードロップダウン（ログイン済み） -->
+      <div class="relative dropdown">
+        <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-green-700 font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+          </svg>
+          田中太郎
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="dropdown-menu absolute right-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-100 py-1 z-50">
+          <a href="../購入履歴/order_history.html" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15a2.25 2.25 0 0 1 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+            </svg>
+            注文履歴
+          </a>
+          <hr class="my-1">
+          <a href="../top/top.html" class="flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+            </svg>
+            ログアウト
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ヒーローバナー -->
+<section class="max-w-7xl mx-auto px-4 mt-6">
+  <div class="relative bg-gradient-to-r from-green-600 to-emerald-500 rounded-2xl overflow-hidden h-64 flex items-center">
+    <div class="px-10 text-white">
+      <p class="text-sm font-medium opacity-80">今週のおすすめ</p>
+      <h2 class="text-3xl font-bold mt-2">夏のセール開催中！</h2>
+      <p class="mt-2 opacity-90">最大50%OFF — 期間限定</p>
+      <button class="mt-4 bg-white text-green-700 font-semibold px-6 py-2 rounded-lg hover:bg-gray-100">詳しく見る →</button>
+    </div>
+    <div class="absolute right-10 bottom-4 text-white opacity-20">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="w-32 h-32">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+      </svg>
+    </div>
+  </div>
+  <div class="flex justify-center gap-2 mt-3">
+    <span class="w-3 h-3 bg-green-600 rounded-full"></span>
+    <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+    <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+  </div>
+</section>
+
+<!-- おすすめ商品グリッド -->
+<section class="max-w-7xl mx-auto px-4 mt-10">
+  <h2 class="text-xl font-bold text-gray-800 mb-4">おすすめ商品</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <a href="../商品詳細/product_detail.html" class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden group">
+      <div class="bg-gray-100 h-48 flex items-center justify-center text-6xl group-hover:scale-105 transition">👕</div>
+      <div class="p-4">
+        <p class="text-sm text-gray-800 font-medium">プレミアムコットンTシャツ</p>
+        <p class="text-green-700 font-bold mt-1">¥2,480</p>
+        <div class="flex items-center gap-1 mt-1">
+          <span class="text-yellow-400 text-xs">★★★★☆</span>
+          <span class="text-xs text-gray-400">(12)</span>
+        </div>
+      </div>
+    </a>
+    <a href="../商品詳細/product_detail.html" class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden group">
+      <div class="bg-gray-100 h-48 flex items-center justify-center text-6xl group-hover:scale-105 transition">👖</div>
+      <div class="p-4">
+        <p class="text-sm text-gray-800 font-medium">ストレッチデニムパンツ</p>
+        <p class="text-green-700 font-bold mt-1">¥4,980</p>
+        <div class="flex items-center gap-1 mt-1">
+          <span class="text-yellow-400 text-xs">★★★★★</span>
+          <span class="text-xs text-gray-400">(28)</span>
+        </div>
+      </div>
+    </a>
+    <a href="../商品詳細/product_detail.html" class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden group">
+      <div class="bg-gray-100 h-48 flex items-center justify-center text-6xl group-hover:scale-105 transition">👟</div>
+      <div class="p-4">
+        <p class="text-sm text-gray-800 font-medium">ランニングシューズ</p>
+        <p class="text-green-700 font-bold mt-1">¥6,800</p>
+        <div class="flex items-center gap-1 mt-1">
+          <span class="text-yellow-400 text-xs">★★★★☆</span>
+          <span class="text-xs text-gray-400">(45)</span>
+        </div>
+      </div>
+    </a>
+    <a href="../商品詳細/product_detail.html" class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden group">
+      <div class="bg-gray-100 h-48 flex items-center justify-center text-6xl group-hover:scale-105 transition">🎒</div>
+      <div class="p-4">
+        <p class="text-sm text-gray-800 font-medium">多機能バックパック</p>
+        <p class="text-green-700 font-bold mt-1">¥3,980</p>
+        <div class="flex items-center gap-1 mt-1">
+          <span class="text-yellow-400 text-xs">★★★☆☆</span>
+          <span class="text-xs text-gray-400">(8)</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- 新着商品 -->
+<section class="max-w-7xl mx-auto px-4 mt-10 mb-16">
+  <h2 class="text-xl font-bold text-gray-800 mb-4">新着商品</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <a href="../商品詳細/product_detail.html" class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden group">
+      <div class="relative bg-gray-100 h-48 flex items-center justify-center text-6xl group-hover:scale-105 transition">
+        ⌚
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">NEW</span>
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-800 font-medium">スマートウォッチ Pro</p>
+        <p class="text-green-700 font-bold mt-1">¥12,800</p>
+      </div>
+    </a>
+    <a href="../商品詳細/product_detail.html" class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden group">
+      <div class="relative bg-gray-100 h-48 flex items-center justify-center text-6xl group-hover:scale-105 transition">
+        🧢
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">NEW</span>
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-800 font-medium">UVカットキャップ</p>
+        <p class="text-green-700 font-bold mt-1">¥1,980</p>
+      </div>
+    </a>
+    <a href="../商品詳細/product_detail.html" class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden group">
+      <div class="relative bg-gray-100 h-48 flex items-center justify-center text-6xl group-hover:scale-105 transition">
+        🕶
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">NEW</span>
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-800 font-medium">偏光サングラス</p>
+        <p class="text-green-700 font-bold mt-1">¥3,200</p>
+      </div>
+    </a>
+    <a href="../商品詳細/product_detail.html" class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden group">
+      <div class="relative bg-gray-100 h-48 flex items-center justify-center text-6xl group-hover:scale-105 transition">
+        🧴
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">NEW</span>
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-800 font-medium">オーガニックハンドクリーム</p>
+        <p class="text-green-700 font-bold mt-1">¥980</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="bg-gray-800 text-gray-400 text-center py-6 text-sm">
+  © 2025 EC Store Portfolio. All rights reserved.
+</footer>
+
+</body>
+</html>
