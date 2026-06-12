@@ -1,7 +1,7 @@
 # 注文確定API
 
 ## Endpoint
-/orders
+api/v1/orders
 
 ## HTTP Methods
 POST

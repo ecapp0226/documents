@@ -1,7 +1,7 @@
 # ユーザー情報取得API
 
 ## Endpoint
-/me
+api/v1/me
 
 ## HTTP Methods
 GET
