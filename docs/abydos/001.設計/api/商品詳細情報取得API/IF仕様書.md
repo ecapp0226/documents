@@ -1,7 +1,7 @@
 # 商品詳細情報取得API
 
 ## Endpoint
-/products/:id
+api/v1/products/:id
 
 ## HTTP Methods
 GET

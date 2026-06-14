@@ -1,7 +1,7 @@
 # ログインAPI
 
 ## Endpoint
-/login
+api/v1/login
 
 ## HTTP Methods
 POST

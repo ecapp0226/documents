@@ -1,7 +1,7 @@
 # 注文履歴取得API
 
 ## Endpoint
-/orders
+api/v1/orders
 
 ## HTTP Methods
 GET
