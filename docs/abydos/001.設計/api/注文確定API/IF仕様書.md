@@ -9,7 +9,7 @@ POST
 ## Request
 | 物理名   |            | 論理名     | Required | 型     | Note      |
 | -------- | ---------- | ---------- | -------- | ------ | --------- |
-| products |            | 商品リスト | 〇       | JSON[] | 100件まで |
+| products |            | 商品リスト | 〇       | JSON[] | 20件まで |
 |          | product_id | 商品ID     | 〇       | Number |           |
 |          | quantity   | 注文数量   | 〇       | Number | 1以上     |
 
