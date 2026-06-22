@@ -1,0 +1,287 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "8d4caacb-a138-41bd-b173-e9f2e4307748",
+        "name": "abydos"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Service",
+            "description": "",
+            "id": "37908639-5117-495b-991a-fee544932f6f",
+            "name": "orders"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "host": "${LOCAL_DOMAIN}",
+                  "path": "/api/v1/orders"
+                },
+                "id": "cf46281a-07f5-4893-908e-8ce4b6e1bf05",
+                "name": "注文履歴一覧API",
+                "headers": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidXNlcl9pZCI6MSwiZSI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3Nzg5NDE1OTV9.hubwTpnsrJJ0-2yY9n0SHzu1HKk-rFeT35hrOM0X-xE"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n  \"products\": [\n    {\n      \"product_id\":1,\n      \"quantity\":11\n    },\n    {\n      \"product_id\":2,\n      \"quantity\":11\n    }\n  ]\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "host": "${LOCAL_DOMAIN}",
+                  "path": "/api/v1/orders"
+                },
+                "id": "0e31b347-0415-4b4e-b4f2-39323798d475",
+                "name": "注文確定API",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidXNlcl9pZCI6MSwiZSI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3Nzg5NDE1OTV9.hubwTpnsrJJ0-2yY9n0SHzu1HKk-rFeT35hrOM0X-xE"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "type": "Service",
+            "id": "29c85c2f-78e4-417b-b332-ae2e966ab1f3",
+            "name": "products"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "name": "product_ids",
+                        "value": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100"
+                      }
+                    ]
+                  },
+                  "host": "${DOMAIN}",
+                  "path": "/api/v1/products"
+                },
+                "id": "832c7f9e-c596-43c0-9e2f-d376bff90c18",
+                "name": "商品一覧情報取得API",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "host": "${DOMAIN}",
+                  "path": "/api/v1/products/${PRODUCT_ID}"
+                },
+                "id": "6303a884-cea7-4bd4-9b13-2d4cfcc1ce94",
+                "name": "商品詳細情報取得API",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "type": "Service",
+            "id": "85b571f6-9c20-459b-a513-0cf72461ed85",
+            "name": "users"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "host": "${LOCAL_DOMAIN}",
+                  "path": "/api/v1/me"
+                },
+                "id": "fb508378-bbda-4d33-a2a1-02c7145a1b85",
+                "name": "ユーザー情報取得API",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "host": "${LOCAL_DOMAIN}",
+                  "path": "/api/v1/login"
+                },
+                "id": "bc182169-dfdd-44b2-b4dd-dce09d2f1a6a",
+                "name": "ログインAPI",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "environments": [
+    {
+      "id": "f11616c0-718f-4342-850a-aa95e39b24cb",
+      "name": "abydos",
+      "variables": {
+        "96fe6b72-7cdc-4fe3-8b60-6d5fd1c9a0e4": {
+          "createdAt": "2026-05-17T01:31:49.613+09:00",
+          "name": "PRODUCT_ID",
+          "value": "1",
+          "enabled": true,
+          "private": false
+        },
+        "61b9f12a-3127-4dee-a307-78067fe6c67e": {
+          "createdAt": "2026-05-17T01:34:12.563+09:00",
+          "name": "DOMAIN",
+          "value": "https://w14pyt7kuk.execute-api.ap-northeast-1.amazonaws.com",
+          "enabled": true,
+          "private": false
+        },
+        "59833b3a-dec6-4384-831d-e5fc82b5a682": {
+          "createdAt": "2026-05-23T14:50:17.127+09:00",
+          "name": "LOCAL_DOMAIN",
+          "value": "http://localhost:8080",
+          "enabled": true,
+          "private": false
+        }
+      }
+    }
+  ]
+}
