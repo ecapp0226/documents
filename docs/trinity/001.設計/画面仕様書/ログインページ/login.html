@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ログイン画面 プレビュー</title>
+  <title>ログイン | SUNABA</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Segoe UI', 'Hiragino Sans', sans-serif; background: #f9fafb; }
@@ -14,15 +14,10 @@
 <!-- ヘッダー（未ログイン状態） -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-    <a href="../top/top.html" class="text-xl font-bold text-green-700 shrink-0 flex items-center gap-1">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-      </svg>
-      EC Store
-    </a>
+    <a href="../トップページ/top.html" class="shrink-0"><img src="../header_logo.png" alt="SUNABA" class="h-8"></a>
     <div class="flex-1 max-w-xl">
       <div class="relative">
-        <input type="text" placeholder="商品を検索..." class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+        <input type="text" placeholder="商品を検索..." class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
         <span class="absolute right-3 top-2.5 text-gray-400">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
@@ -31,7 +26,7 @@
       </div>
     </div>
     <div class="flex items-center gap-4 shrink-0">
-      <a href="../かご/cart.html" class="relative text-gray-600 hover:text-green-700">
+      <a href="../カートページ/cart.html" class="relative text-gray-600 hover:text-blue-600">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
         </svg>
@@ -49,7 +44,7 @@
       <div class="mb-5">
         <label class="block text-sm font-medium text-gray-700 mb-1">メールアドレス</label>
         <input type="email" placeholder="example@email.com"
-          class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
       </div>
 
       <!-- パスワード + 表示トグル -->
@@ -57,7 +52,7 @@
         <label class="block text-sm font-medium text-gray-700 mb-1">パスワード</label>
         <div class="relative">
           <input id="passwordInput" type="password" placeholder="パスワードを入力" value="password123"
-            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent pr-12">
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-12">
           <button onclick="togglePassword()" class="absolute right-3 top-3 text-gray-400 hover:text-gray-600" title="パスワードを表示">
             <!-- Heroicons: eye (outline) -->
             <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -81,7 +76,7 @@
       </div>
 
       <!-- ログインボタン -->
-      <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition text-lg">
+      <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition text-lg">
         ログイン
       </button>
 
@@ -107,7 +102,7 @@
       <!-- ローディング状態 -->
       <div class="mt-6 border-t border-dashed border-gray-200 pt-4">
         <p class="text-center text-sm text-gray-400 mb-3">▼ ローディング状態</p>
-        <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg opacity-75 cursor-not-allowed flex items-center justify-center gap-2 text-lg" disabled>
+        <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg opacity-75 cursor-not-allowed flex items-center justify-center gap-2 text-lg" disabled>
           <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
@@ -120,7 +115,7 @@
 </main>
 
 <footer class="bg-gray-800 text-gray-400 text-center py-6 text-sm">
-  © 2025 EC Store Portfolio. All rights reserved.
+  © 2025 SUNABA. All rights reserved.
 </footer>
 
 <script>
