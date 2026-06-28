@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エラー表示 プレビュー（Heroicons版）</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Segoe UI', 'Hiragino Sans', sans-serif; background: #f9fafb; }
+    .dropdown-menu { display: none; }
+    .dropdown:hover .dropdown-menu { display: block; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- ヘッダー -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="../トップページ/top.html" class="shrink-0"><img src="../header_logo.png" alt="SUNABA" class="h-8"></a>
+    <div class="flex-1 max-w-xl">
+      <div class="relative">
+        <input type="text" placeholder="商品を検索..." class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <span class="absolute right-3 top-2.5 text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="flex items-center gap-4 shrink-0">
+      <a href="../カートページ/cart.html" class="relative text-gray-600 hover:text-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg>
+        <span class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">3</span>
+      </a>
+      <div class="relative dropdown">
+        <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-blue-600 font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+          </svg>
+          田中太郎 <span class="text-xs">▼</span>
+        </button>
+        <div class="dropdown-menu absolute right-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-100 py-1 z-50">
+          <a href="../注文履歴ページ/order_history.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">📋 注文履歴</a>
+          <hr class="my-1">
+          <a href="../トップページ/top.html" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">🚪 ログアウト</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="flex-1 max-w-7xl mx-auto px-4 py-6 w-full">
+
+  <h2 class="text-sm font-semibold text-gray-400 mb-8 text-center">― エラー表示パターン（Heroicons）―</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- 404 エラー -->
+    <div>
+      <h3 class="text-xs font-semibold text-gray-400 mb-3 text-center">404 - 商品が見つからない</h3>
+      <div class="bg-white rounded-2xl shadow-sm p-10 text-center min-h-[360px] flex flex-col items-center justify-center">
+        <!-- Heroicons: magnifying-glass (outline) -->
+        <div class="w-20 h-20 mx-auto mb-6 text-gray-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-full h-full">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </div>
+        <h2 class="text-lg font-semibold text-gray-800 mb-2">お探しの商品は見つかりませんでした。</h2>
+        <p class="text-sm text-gray-500 mb-8">削除されたか、URLが間違っている可能性があります。</p>
+        <a href="../トップページ/top.html" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition">
+          <!-- Heroicons: arrow-left (mini) -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+          </svg>
+          TOPへ戻る
+        </a>
+      </div>
+    </div>
+
+    <!-- 500 サーバーエラー -->
+    <div>
+      <h3 class="text-xs font-semibold text-gray-400 mb-3 text-center">500 - サーバーエラー</h3>
+      <div class="bg-white rounded-2xl shadow-sm p-10 text-center min-h-[360px] flex flex-col items-center justify-center">
+        <!-- Heroicons: exclamation-triangle (outline) -->
+        <div class="w-20 h-20 mx-auto mb-6 text-amber-400">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-full h-full">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+          </svg>
+        </div>
+        <h2 class="text-lg font-semibold text-gray-800 mb-2">エラーが発生しました</h2>
+        <p class="text-sm text-gray-500 mb-8">しばらく時間をおいて再度お試しください。</p>
+        <div class="flex flex-col gap-3 items-center">
+          <button class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition">
+            <!-- Heroicons: arrow-path (mini) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+              <path fill-rule="evenodd" d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z" clip-rule="evenodd" />
+            </svg>
+            再読み込み
+          </button>
+          <a href="../トップページ/top.html" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition">
+            <!-- Heroicons: arrow-left (mini) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+              <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+            </svg>
+            TOPへ戻る
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="bg-gray-800 text-gray-400 text-center py-6 text-sm mt-16">
+  © 2025 SUNABA. All rights reserved.
+</footer>
+
+</body>
+</html>

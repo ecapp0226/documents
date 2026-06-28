@@ -32,7 +32,7 @@ async function capture() {
   }
 
   // エラー画面
-  const errorHtml = path.join(__dirname, 'product_detail.html')
+  const errorHtml = path.join(__dirname, '../エラーページ/error.html')
   await page.goto(`file:///${path.resolve(errorHtml).replace(/\\/g, '/')}`, { waitUntil: 'networkidle0' })
 
   await page.screenshot({ path: path.join(__dirname, 'error_design.png'), fullPage: true })
