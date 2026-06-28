@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer')
 const path = require('path')
 
 async function capture() {
-  const html = path.join(__dirname, '../../../../../projects/ph1/docs/画面要求/購入履歴/order_history.html')
+  const html = path.join(__dirname, 'order_history.html')
   const fileUrl = `file:///${path.resolve(html).replace(/\\/g, '/')}`
 
   const browser = await puppeteer.launch({ headless: true })
@@ -19,6 +19,10 @@ async function capture() {
     console.log('Captured: order_history_main.png')
   }
 
+  await page.evaluate(() => {
+    const el = document.getElementById('error-toast')
+    if (el) el.classList.remove('hidden')
+  })
   const toast = await page.$('#error-toast')
   if (toast) {
     await toast.screenshot({ path: path.join(__dirname, 'error_toast.png') })
