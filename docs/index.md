@@ -1,13 +1,13 @@
-# ecapp ドキュメント
+# SUNABA Wiki
 
-![image](assets/image.png)
+![image](projects/develop_ph1.5/header_logo.png)
 
-ECサイトポートフォリオの設計・開発ドキュメント集です。
+ECサイトポートフォリオの設計・開発Wikiです。
 
 ## アクセス方法
 以下のリンクにアクセスしてください
   
-https://d2hky3wa5np1lb.cloudfront.net/
+- [サイト](https://d2etvpe349j1yl.cloudfront.net)
 
 09:00~19:00の間サイトを開放しています。
   

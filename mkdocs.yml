@@ -1,8 +1,16 @@
-site_name: ecapp ドキュメント
+site_name: SUNABA Wiki
 site_url: https://ecapp0226.github.io/documents/
 theme:
   name: material
   language: ja
+  palette:
+    primary: custom
+    accent: custom
+  logo: projects/develop_ph1.5/logo.png
+  favicon: projects/develop_ph1.5/favicon.svg
+
+extra_css:
+  - stylesheets/extra.css
 
 docs_dir: docs
 site_dir: site
