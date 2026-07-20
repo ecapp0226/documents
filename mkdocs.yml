@@ -44,6 +44,7 @@ nav:
         - 注文履歴一覧API:
           - IF仕様書: abydos/001.設計/api/注文履歴一覧API/IF仕様書.md
           - 詳細設計: abydos/001.設計/api/注文履歴一覧API/詳細設計.md
+      - セキュリティ設計: abydos/001.設計/セキュリティ設計.md
       - DynamoDBテーブル設計:
         - users: abydos/001.設計/dynamodb/users.md
         - products: abydos/001.設計/dynamodb/products.md
